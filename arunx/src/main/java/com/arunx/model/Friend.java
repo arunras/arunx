@@ -29,6 +29,25 @@ public class Friend {
 	@JsonIgnore
 	private boolean married;
 	
+	public Friend() {}
+	
+	
+	public Friend(@NotBlank String firstName, @NotEmpty String lastName) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+
+	public Friend(@NotBlank String firstName, @NotEmpty String lastName, int age, boolean married,
+			List<Address> addresses) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.married = married;
+		this.addresses = addresses;
+	}
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Address> addresses;
 	
