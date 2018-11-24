@@ -1,4 +1,4 @@
-package com.arunx.controller;
+package com.arunx.exception;
 
 import java.util.List;
 import java.util.stream.Collectors;
